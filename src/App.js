@@ -1,6 +1,6 @@
 // import './App.css';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Routes,
   Route,
   Switch,
@@ -35,7 +35,8 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
+      {/* <Router> */}
         <Navbar countries={countries} />
         <Routes>
           <Route
@@ -53,10 +54,11 @@ function App() {
                 numberWithCommas={numberWithCommas}
               />
             }
-          />
+            />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Router>
+      {/* </Router> */}
+            </BrowserRouter>
     </div>
   );
 }

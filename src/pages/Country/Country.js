@@ -6,17 +6,15 @@ import axios from "axios";
 
 const Country = ({ numberWithCommas, countries }) => {
   const countryName = useParams().country;
-  console.log(countryName);
   // console.log("cv",countries);
   const isCountry = countries.filter((el) => el.name === countryName)[0];
-  console.log(isCountry);
 
   // const{latest_data,today, name,population}=isCountry
   // console.log({latest_data,today, name,population});
 
-  const [a, b] = useState([]);
+  // const [a, b] = useState([]);
 
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
 
   return (
     <div>

@@ -12,7 +12,6 @@ const listStyle = {
 const Navbar = ({ countries }) => {
   function clickEvent(a) {
     navigate("../" + a);
-    // setValue(e.target.value)
   }
   const navigate = useNavigate();
 
@@ -20,8 +19,7 @@ const Navbar = ({ countries }) => {
 
   const [value, setValue] = useState("");
   const [c, setC] = useState("");
-  // console.log(countries);
-  // const divListStyle=""
+  
   useEffect(() => {
     clickEvent(c);
   }, [c]);
@@ -52,10 +50,8 @@ const Navbar = ({ countries }) => {
             select country
             <select
               onChange={(e) => {
-                console.log(e);
 
                 const vv = e.target.value;
-                // setValue(vv)
                 setC(vv);
               }}
             >
@@ -64,14 +60,10 @@ const Navbar = ({ countries }) => {
                 <option key={el.code}>{el.name}</option>
               ))}
             </select>
-            {/* <div className={divListStyle}></div> */}
             <button
-              onClick={() => {
-                // setIsClick(false);
-                // setValue("");
-                // go.current.value=""
-                // console.log(go.current.value);
-                // go.current.value=""
+              onClick={(e) => {
+                console.log(e);
+                
               }}
             >
               X

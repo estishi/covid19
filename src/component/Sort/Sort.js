@@ -25,9 +25,7 @@ const Sort = ({mostCountries, time, numberWithCommas }) => {
   useEffect(() => {
     ww();
   }, [mostCountries, time]);
-  // useEffect(() => {
-  //   setisSort(true)
-  // }, [sorted]);
+  
   useEffect(() => {
     clickEvent(c);
   }, [c]);

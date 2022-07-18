@@ -16,18 +16,10 @@ const Most = ({ countries, numberWithCommas }) => {
     "Most deaths - all time",
   ];
 
-  // const incident =["deaths", "confirmed"]
-  // const time=["today","latest_data"]
-  // console.log(time[0]);
-  // let today = countries.today
-  // let last= countries.latest_data
-
-  // useEffect(()=>{},[])
+  
   function sortBy() {
     setMostCountries(
       countries.map((el) =>
-        // console.log(el);
-        // console.log(el.today);
         ({
           name: el.name,
           todayDeaths: el.today.deaths,
@@ -37,26 +29,13 @@ const Most = ({ countries, numberWithCommas }) => {
         })
       )
     );
-    // el.time[1].map(()=>{})
   }
 
-  //     //  sit.map((el,i)=>{
-  //     // })
-  // }
-
-  //    let min2= mostCountries.sort((a,b)=>
-  //     a.ld-b.ld
-  //     )
-  //     console.log(min2);
-  //     let min2r=min2.reverse()
-  //     console.log(min2r);
 
   useEffect(() => {
     sortBy();
   }, [countries]);
-//   useEffect(() => {
-//     s()
-//   }, [mostCountries]);
+;
 
   return (
     <div className="most">

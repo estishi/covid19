@@ -1,6 +1,6 @@
-import React,{useEffect, useState,useRef} from 'react'
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Country from '../pages/Country/Country';
+import Country from "../pages/Country/Country";
 
 const listStyle = {
   display: "flex",
@@ -9,35 +9,28 @@ const listStyle = {
   listStyle: "none",
 };
 
-const Navbar = ({countries}) => {
-  function clickEvent(a){
-    navigate("../" + a)
-    console.log(value)
+const Navbar = ({ countries }) => {
+  function clickEvent(a) {
+    navigate("../" + a);
     // setValue(e.target.value)
-
   }
   const navigate = useNavigate();
 
-  const go = useRef()
+  const go = useRef();
 
   const [value, setValue] = useState("");
   const [c, setC] = useState("");
   // console.log(countries);
   // const divListStyle=""
-  useEffect(()=>{
-    console.log("c",c);
-    clickEvent(c)
-    // <Country countries={countries} country={c}/>
-  },[c])
-
+  useEffect(() => {
+    clickEvent(c);
+  }, [c]);
 
   return (
     <div>
-       <ul style={listStyle}>
+      <ul style={listStyle}>
         <li>
-          <Link to="/">
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           {/* <input
@@ -55,54 +48,47 @@ const Navbar = ({countries}) => {
            }}
            
            >  </input> */}
-           <div>
-           select country
-           <select 
-           onChange={(e) => {
-             console.log(e);
+          <div>
+            select country
+            <select
+              onChange={(e) => {
+                console.log(e);
 
-            const vv=e.target.value
-            // setValue(vv)
-            setC(vv)
-         
-
-          }}>
-            <option ref={go}></option>
-            {countries.map((el,i)=>
-           <option key={el.code} >{el.name}</option>)}</select>
-           {/* <div className={divListStyle}></div> */}
-           <button
+                const vv = e.target.value;
+                // setValue(vv)
+                setC(vv);
+              }}
+            >
+              <option ref={go}></option>
+              {countries.map((el, i) => (
+                <option key={el.code}>{el.name}</option>
+              ))}
+            </select>
+            {/* <div className={divListStyle}></div> */}
+            <button
               onClick={() => {
                 // setIsClick(false);
                 // setValue("");
                 // go.current.value=""
                 // console.log(go.current.value);
                 // go.current.value=""
-
               }}
             >
               X
             </button>
-           </div>
+          </div>
         </li>
         <li>
-          <Link to="/about" >
-            About
-          </Link>
+          <Link to="/about">About</Link>
         </li>
-        <li>
-          {/* <Link to="/countries">countries</Link> */}
-        </li>
+        <li>{/* <Link to="/countries">countries</Link> */}</li>
       </ul>
-      <br/>
-      <form>
-        {/* <input checked>{<Country/>}</input> */}
-      </form>
+      <br />
+      <form>{/* <input checked>{<Country/>}</input> */}</form>
 
       <h3>COVID 19 CORONAVIRUS TRACKER</h3>
-
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

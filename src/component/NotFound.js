@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const NotFounf = () => {
-  return (
-    <div>NotFounf</div>
-  )
-}
+  return <div>NotFounf</div>;
+};
 
-export default NotFounf
+export default NotFounf;

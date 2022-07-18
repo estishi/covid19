@@ -1,15 +1,12 @@
-import React from 'react'
+import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-
 const About = () => {
-    const location = useLocation();
+  const location = useLocation();
 
-    console.log(location.state);
+  console.log(location.state);
 
-  return (
-    <div>About</div>
-  )
-}
+  return <div>About</div>;
+};
 
-export default About
+export default About;
